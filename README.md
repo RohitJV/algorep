@@ -12,3 +12,6 @@ List of algorithms:
 2) Least Common Ancestor : 
 * <O(N), O(sqrt(N))>
 * <O(NlogN), O(logN)> 
+3) Fenwick Tree :
+* 1-D : logN - update, read
+* 2-D : logN.logM - update, read
