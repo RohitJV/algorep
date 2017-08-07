@@ -33,6 +33,7 @@ const   int            md  = 0;
 vector<string> s;
 int n,m;
 string x;
+bool res=false;
 
 int main() {
     cin>>n>>m;
@@ -66,11 +67,11 @@ int main() {
             }
         }
         if(check==7)
-            cout<<"YES";
+            res=res|true;
         else
-            cout<<"NO";
+            res=res|false;
     }
-    else if(m%3==0) {
+    if(m%3==0) {
         for(int i=0;i<3;i++) {
             bool flag=true;
             char ch = s[0][m/3*i];
@@ -94,11 +95,12 @@ int main() {
             }
         }
         if(check==7)
-            cout<<"YES";
+            res=res|true;
         else
-            cout<<"NO";
+            res=res|false;
     }
-    else {
+    if(res)
+        cout<<"YES";
+    else
         cout<<"NO";
-    }
 }
